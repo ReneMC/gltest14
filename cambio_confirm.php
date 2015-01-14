@@ -24,9 +24,9 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a><span class="glyphicon glyphicon-home" aria-hidden="true"></span> </a></li>
-        <li><a><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a></li>
-        <li class="active"><a><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Baja empleados</a></li>
-        <li><a><span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> </a></li>
+        <li><a><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> </a></li>
+        <li><a><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> </a></li>
+        <li class="active"><a><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Modificaciones</a></li>
       </ul>
     </div>
   </div>
@@ -47,7 +47,7 @@
 <div>
   <div class="col-md-10-offset-3 container" style="position: middle;">
     <center><h3>Instrucciones:</h3></center>
-    <p>A continuaci&oacute;n se le presentar&aacute; el formulario de alta de empleados. Favor de llenar correctamente los datos que se le piden. Al terminar, seleccione el bot&oacute;n <span class="label label-default">Finalizar</span> que se encuentra al final del formulario para as&iacute; guardar los datos ingresados.</p>
+    <p>Puede comenzar a realizar las modificaciones que necesite. Al terminar, seleccione el bot&oacute;n <span class="label label-default">Finalizar</span> que se encuentra al final del formulario para as&iacute; guardar los datos ingresados. Si no es el registro que busca, puede regresar al men&uacute; anterior.</p>
   </div>
 </div>
 

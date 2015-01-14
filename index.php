@@ -30,9 +30,9 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Men&uacute; Principal</a></li>
-        <li><a><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a></li>
-        <li><a><span class="glyphicon glyphicon-file" aria-hidden="true"></span> </a></li>
-        <li><a><span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> </a></li>
+        <li><a><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> </a></li>
+        <li><a><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> </a></li>
+        <li><a><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> </a></li>
       </ul>
     </div>
   </div>
@@ -54,10 +54,8 @@
 
     <div class="col-md-10-offset-3 container" style="position: middle;">
       <h1>Bienvenido al formulario!<br><h4><small>13 de Enero del 2015</h4></h1>
-        <h2><small>1. En esta secci&oacute;n describir&eacute; el funcionamiento de la aplicaci&oacute;n.</small></h2>
-        <h2><small>2. Tratar&eacute; de ser breve y a la vez elegante.</h2></small>
-        <h2><small>3. El footer se est&aacute; poniendo punk, seg&uacute;n veo.</h2></small>
-
+        <h2><small>A continuaci&oacute;n se presenta un formulario con sus opciones para dar de Alta, Baja y hacer Cambios a sus registros. El sitio fue hecho utilizando PHP, una base de datos en MySQL y Bootstrap.</small></h2>
+        <h2><small>Para continuar con el sitio, dar clic en el bot&oacute;n que est&aacute; debajo de este texto.</h2></small>
         <br>
 
       <button type="button" onclick="location='menu'" class="btn btn-default btn-lg" href="menu"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Ir a la aplicaci&oacute;n</button>
@@ -68,6 +66,7 @@
 
 <!-- Se hacen saltos de línea en caso de que el footer -->
 <!-- se coma parte del espacio del contenido. -->
+<br><br><br><br><br>
 <br><br><br><br><br>
 <br><br><br><br><br>
 <!--============================================================================-->

@@ -24,9 +24,9 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a><span class="glyphicon glyphicon-home" aria-hidden="true"></span> </a></li>
-        <li><a><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a></li>
-        <li class="active"><a><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Baja empleados</a></li>
-        <li><a><span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> </a></li>
+        <li><a><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> </a></li>
+        <li class="active"><a><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Baja empleados</a></li>
+        <li><a><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> </a></li>
       </ul>
     </div>
   </div>
@@ -47,7 +47,7 @@
 <div>
   <div class="col-md-10-offset-3 container" style="position: middle;">
     <center><h3>Instrucciones:</h3></center>
-    <p>A continuaci&oacute;n se le presentar&aacute; el formulario de alta de empleados. Favor de llenar correctamente los datos que se le piden. Al terminar, seleccione el bot&oacute;n <span class="label label-default">Finalizar</span> que se encuentra al final del formulario para as&iacute; guardar los datos ingresados.</p>
+    <p>A continuaci&oacute;n se le presentar&aacute; el formulario de baja de empleados. Favor de confirmar el n&uacute;mero de empleado del registro que desea eliminar. Al terminar, seleccione el bot&oacute;n <span class="label label-default">Buscar</span> que se encuentra en la parte de abajo de la casilla para comenzar su b&uacute;squeda.</p>
   </div>
 </div>
 
@@ -59,9 +59,9 @@
 <!--============================================================================-->
   <br>
   <div>
-    <p><strong>Ingrese la clave del empleado a dar de baja:
-      <input type="number" class="form-control" name="clave" id="clave">
-    </strong></p>
+    <h3><strong>Ingrese la clave del empleado a dar de baja:
+      <input type="number" class="form-control" name="clave" id="clave" required>
+    </strong></h3>
   </div>
   <p align="center">
     <input type="submit" class="btn btn-default btn-lg" value="Buscar" name="eliminar" id="eliminar">
@@ -71,7 +71,9 @@
 
 <!-- Se hacen saltos de línea en caso de que el footer -->
 <!-- se coma parte del espacio del contenido. -->
-<br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
 <!--============================================================================-->
 <!--================================= Footer ===================================-->
 <!--============================================================================-->

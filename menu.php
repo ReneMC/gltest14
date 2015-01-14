@@ -24,9 +24,9 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li class="active"><a><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Men&uacute; Principal</a></li>
-        <li><a><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a></li>
-        <li><a><span class="glyphicon glyphicon-file" aria-hidden="true"></span> </a></li>
-        <li><a><span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> </a></li>
+        <li><a><span class="glyphicon glyphicon-ok" aria-hidden="true"></span> </a></li>
+        <li><a><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> </a></li>
+        <li><a><span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> </a></li>
       </ul>
     </div>
   </div>
@@ -47,7 +47,7 @@
 <div>
   <div class="col-md-10-offset-3 container" style="position: middle;">
 
-    <h1>Men&uacute; Principal <small>Seleccione una de las opciones.</small></h1>
+    <h1>Men&uacute; Principal <small>Seleccione una de las opciones:</small></h1>
     <h1></h1>
       <br>
     <div class="list-group">
@@ -57,11 +57,11 @@
       </a>
       <a href="baja" class="list-group-item">
         <h4 class="list-group-item-heading">Dar de baja un usuario en el sistema</h4>
-        <p class="list-group-item-text">Dar clic en esta seccion para ir a altas de usuario.</p>
+        <p class="list-group-item-text">Dar clic en esta seccion para ir a bajas de usuario.</p>
       </a>
       <a href="cambio" class="list-group-item">
         <h4 class="list-group-item-heading">Modificar los datos de un usuario en el sistema</h4>
-        <p class="list-group-item-text">Dar clic en esta seccion para ir a altas de usuario.</p>
+        <p class="list-group-item-text">Dar clic en esta seccion para ir a modificaciones de usuario.</p>
       </a>
     </div>
 
