@@ -52,99 +52,22 @@
 </div>
 
 <div class="col-md-10-offset-3 container" style="position: middle;">
+
+  <form name="cambio" action="cambio_confirm" method="POST">
 <!--============================================================================-->
 <!--================================= Formulario ===============================-->
 <!--============================================================================-->
-
-<script language="JavaScript" type="text/javascript">
-function cancelar()
-{
-    window.location="baja"
-}
-</script>
-
-</head>
-
-
-<?php
-include("conexion.php");
-$clave=$_POST['clave'];
-if(empty($clave))
-{
- echo"<script language='JavaScript' type='text/JavaScript'>
-           window.location='baja'
-        </script>
-       ";
-	   exit();
-}
-
-$sql="select * from tbl_empleado where id='$clave'";
-$registro=mysql_query($sql,$conexion);
-if(!$registro)
-{
- echo"<script language='JavaScript' type='text/JavaScript'>
-           alert('Clave ID incorrecta')
-		   window.location='baja'
-		 </script>
-       ";
-}
- else
- {
- $datos=mysql_fetch_object($registro);
-  if(!$datos->id)
-  {
-   echo"<script language='JavaScript' type='text/JavaScript'>
-           alert('No existe empleado con ese ID')
-		   window.location='baja'
-		 </script>
-       ";
-	   exit();
-  }
- }
-?>
-
-<form name="baja" action="baja_save" method="POST">
-  <input type="hidden" name="clave" value="<?php echo $datos->id?>">
-<fieldset>
-    <legend>Datos Generales</legend>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th width="25%"></th>
-          <th width="25%"></th>
-          <th width="25%"></th>
-          <th width="25%"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><center>Nombre:</center></td>
-          <td><input type="text" class="form-control" name="nombre" value="<?php echo $datos->nombre?>" readonly></td>
-          <td> <center>Edad:</center> </td>
-          <td><input type="number" class="form-control" name="edad" value="<?php echo $datos->edad?>" readonly></td>
-        </tr>
-        <tr>
-          <td><center>Direcci&oacute;n:</center></td>
-          <td><input type="text" class="form-control" name="direccion" value="<?php echo $datos->direccion?>" readonly></td>
-          <td><center>Estado:</center></td>
-          <td><input type="text" class="form-control" name="estado" value="<?php echo $datos->estado?>" readonly></td>
-        <tr>
-          <td><center>Fecha de Nacimiento:</center></td>
-          <td><input type="date" class="form-control" name="fecha_nacimiento" value="<?php echo $datos->fecha_nacimiento?>" readonly></input></td>
-          <td><center>Tel&eacute;fono:</center></td>
-          <td><input type="number" class="form-control" name="telefono" value="<?php echo $datos->telefono?>" readonly></input></td>
-        </tr>
-      </tbody>
-    </table>
-</fieldset>
-
-
-<input type="submit" class="btn btn-default btn-lg" value="S&iacute;, deseo eliminar este registro">
-<input type="button" class="btn btn-default btn-lg" onClick="window.location='menu'" value="Volver al men&uacute;" name="regresar">
-</div>
-
-
-</form>
+  <br>
+  <div>
+    <p><strong>Ingrese la clave del empleado a dar de baja:
+      <input type="number" class="form-control" name="clave" id="clave">
+    </strong></p>
+  </div>
+  <p align="center">
+    <input type="submit" class="btn btn-default btn-lg" value="Buscar" name="eliminar" id="eliminar">
+    <input type="button" class="btn btn-default btn-lg" onClick="window.location='menu'" value="Volver al men&uacute;" name="regresar" id="regresar">
+  </p>
+  </form>
 
 <!-- Se hacen saltos de línea en caso de que el footer -->
 <!-- se coma parte del espacio del contenido. -->

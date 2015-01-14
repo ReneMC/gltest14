@@ -59,7 +59,7 @@
 <script language="JavaScript" type="text/javascript">
 function cancelar()
 {
-    window.location="baja"
+    window.location="cambio"
 }
 </script>
 
@@ -72,21 +72,19 @@ $clave=$_POST['clave'];
 if(empty($clave))
 {
  echo"<script language='JavaScript' type='text/JavaScript'>
-           window.location='baja'
+           window.location='cambio'
         </script>
        ";
-	   exit();
+     exit();
 }
 
-$sql="select * from tbl_empleado where id='$clave'";
+$sql="select * from tbl_empleado, tbl_conocimientos, tbl_lenguajes where tbl_empleado.id='$clave'";
 $registro=mysql_query($sql,$conexion);
 if(!$registro)
 {
  echo"<script language='JavaScript' type='text/JavaScript'>
            alert('Clave ID incorrecta')
-		   window.location='baja'
-		 </script>
-       ";
+       window.location='cambio'";
 }
  else
  {
@@ -95,15 +93,15 @@ if(!$registro)
   {
    echo"<script language='JavaScript' type='text/JavaScript'>
            alert('No existe empleado con ese ID')
-		   window.location='baja'
-		 </script>
+       window.location='cambio'
+     </script>
        ";
-	   exit();
+     exit();
   }
  }
 ?>
 
-<form name="baja" action="baja_save" method="POST">
+<form name="cambio" action="cambio_save" method="POST">
   <input type="hidden" name="clave" value="<?php echo $datos->id?>">
 <fieldset>
     <legend>Datos Generales</legend>
@@ -119,27 +117,79 @@ if(!$registro)
       <tbody>
         <tr>
           <td><center>Nombre:</center></td>
-          <td><input type="text" class="form-control" name="nombre" value="<?php echo $datos->nombre?>" readonly></td>
+          <td><input type="text" class="form-control" name="nombre" value="<?php echo $datos->nombre?>"></td>
           <td> <center>Edad:</center> </td>
-          <td><input type="number" class="form-control" name="edad" value="<?php echo $datos->edad?>" readonly></td>
+          <td><input type="number" class="form-control" name="edad" value="<?php echo $datos->edad?>"></td>
         </tr>
         <tr>
           <td><center>Direcci&oacute;n:</center></td>
-          <td><input type="text" class="form-control" name="direccion" value="<?php echo $datos->direccion?>" readonly></td>
+          <td><input type="text" class="form-control" name="direccion" value="<?php echo $datos->direccion?>"></td>
           <td><center>Estado:</center></td>
-          <td><input type="text" class="form-control" name="estado" value="<?php echo $datos->estado?>" readonly></td>
+          <td><input type="text" class="form-control" name="estado" value="<?php echo $datos->estado?>"></td>
         <tr>
           <td><center>Fecha de Nacimiento:</center></td>
-          <td><input type="date" class="form-control" name="fecha_nacimiento" value="<?php echo $datos->fecha_nacimiento?>" readonly></input></td>
+          <td><input type="date" class="form-control" name="fecha_nacimiento" value="<?php echo $datos->fecha_nacimiento?>"></input></td>
           <td><center>Tel&eacute;fono:</center></td>
-          <td><input type="number" class="form-control" name="telefono" value="<?php echo $datos->telefono?>" readonly></input></td>
+          <td><input type="number" class="form-control" name="telefono" value="<?php echo $datos->telefono?>"></input></td>
         </tr>
       </tbody>
     </table>
 </fieldset>
 
+<fieldset>
+  <legend>Conocimientos</legend>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th width="25%"></th>
+          <th width="25%"></th>
+          <th width="25%"></th>
+          <th width="25%"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><center>Porcentaje:</center></td>
+          <td>
+            <div class="input-group">
+              <input type="number" class="form-control" name="porcentaje" value="<?php echo $datos->porcentaje?>">
+              <span class="input-group-addon" id="basic-addon2">%</span>
+            </div>
+          </td>
+          <td><center>Curso:</center> </td>
+          <td><input type="number" class="form-control" name="curso" value="<?php echo $datos->curso?>"></td>
+        </tr>
+      </tbody>
+    </table>
+</fieldset>
 
-<input type="submit" class="btn btn-default btn-lg" value="S&iacute;, deseo eliminar este registro">
+<fieldset>
+  <legend>Lenguajes</legend>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th width="25%"></th>
+          <th width="25%"></th>
+          <th width="25%"></th>
+          <th width="25%"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><center>Lenguaje:</center></td>
+          <td>
+            <input type="text" class="form-control" name="lenguaje" value="<?php echo $datos->lenguaje?>">
+          </td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+</fieldset>
+
+
+<input type="submit" class="btn btn-default btn-lg" value="Finalizar">
 <input type="button" class="btn btn-default btn-lg" onClick="window.location='menu'" value="Volver al men&uacute;" name="regresar">
 </div>
 

@@ -153,6 +153,7 @@
 </fieldset>
 
 <input type="submit" class="btn btn-default btn-lg" value="Finalizar">
+<input type="button" class="btn btn-default btn-lg" onClick="window.location='menu'" value="Volver al men&uacute;" name="regresar">
 </div>
 
 

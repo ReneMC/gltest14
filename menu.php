@@ -59,7 +59,7 @@
         <h4 class="list-group-item-heading">Dar de baja un usuario en el sistema</h4>
         <p class="list-group-item-text">Dar clic en esta seccion para ir a altas de usuario.</p>
       </a>
-      <a href="index" class="list-group-item">
+      <a href="cambio" class="list-group-item">
         <h4 class="list-group-item-heading">Modificar los datos de un usuario en el sistema</h4>
         <p class="list-group-item-text">Dar clic en esta seccion para ir a altas de usuario.</p>
       </a>

@@ -29,7 +29,6 @@
     $id = $row['id'];
   }
 
-
   session_start();
   $_SESSION['user_id'] = $id;
 

@@ -64,7 +64,7 @@
     </strong></p>
   </div>
   <p align="center">
-    <input type="submit" class="btn btn-default btn-lg" value="BUSCAR" name="ELIMINAR" id="eliminar">
+    <input type="submit" class="btn btn-default btn-lg" value="Buscar" name="eliminar" id="eliminar">
     <input type="button" class="btn btn-default btn-lg" onClick="window.location='menu'" value="Volver al men&uacute;" name="regresar" id="regresar">
   </p>
   </form>
