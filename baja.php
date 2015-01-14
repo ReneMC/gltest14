@@ -23,9 +23,9 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Men&uacute; Principal</a></li>
+        <li><a><span class="glyphicon glyphicon-home" aria-hidden="true"></span> </a></li>
         <li><a><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a></li>
-        <li><a><span class="glyphicon glyphicon-file" aria-hidden="true"></span> </a></li>
+        <li class="active"><a><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Baja empleados</a></li>
         <li><a><span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> </a></li>
       </ul>
     </div>
@@ -46,32 +46,32 @@
 <!--============================================================================-->
 <div>
   <div class="col-md-10-offset-3 container" style="position: middle;">
-
-    <h1>Men&uacute; Principal <small>Seleccione una de las opciones.</small></h1>
-    <h1></h1>
-      <br>
-    <div class="list-group">
-      <a href="alta" class="list-group-item">
-        <h4 class="list-group-item-heading">Dar de alta un usuario en el sistema</h4>
-        <p class="list-group-item-text">Dar clic en esta seccion para ir a altas de usuario.</p>
-      </a>
-      <a href="baja" class="list-group-item">
-        <h4 class="list-group-item-heading">Dar de baja un usuario en el sistema</h4>
-        <p class="list-group-item-text">Dar clic en esta seccion para ir a altas de usuario.</p>
-      </a>
-      <a href="index" class="list-group-item">
-        <h4 class="list-group-item-heading">Modificar los datos de un usuario en el sistema</h4>
-        <p class="list-group-item-text">Dar clic en esta seccion para ir a altas de usuario.</p>
-      </a>
-    </div>
-
+    <center><h3>Instrucciones:</h3></center>
+    <p>A continuaci&oacute;n se le presentar&aacute; el formulario de alta de empleados. Favor de llenar correctamente los datos que se le piden. Al terminar, seleccione el bot&oacute;n <span class="label label-default">Finalizar</span> que se encuentra al final del formulario para as&iacute; guardar los datos ingresados.</p>
   </div>
 </div>
 
-  <!-- Se hacen saltos de línea en caso de que el footer -->
-  <!-- se coma parte del espacio del contenido. -->
-  <br><br><br><br><br><br><br>
-  <br><br><br><br><br><br><br>
+<div class="col-md-10-offset-3 container" style="position: middle;">
+
+  <form name="baja" action="baja_confirm" method="POST">
+<!--============================================================================-->
+<!--================================= Formulario ===============================-->
+<!--============================================================================-->
+  <br>
+  <div>
+    <p><strong>Ingrese la clave del empleado a dar de baja:
+      <input type="number" class="form-control" name="clave" id="clave">
+    </strong></p>
+  </div>
+  <p align="center">
+    <input type="submit" class="btn btn-default btn-lg" value="BUSCAR" name="ELIMINAR" id="eliminar">
+    <input type="button" class="btn btn-default btn-lg" onClick="window.location='menu'" value="Volver al men&uacute;" name="regresar" id="regresar">
+  </p>
+  </form>
+
+<!-- Se hacen saltos de línea en caso de que el footer -->
+<!-- se coma parte del espacio del contenido. -->
+<br><br><br><br><br><br><br>
 <!--============================================================================-->
 <!--================================= Footer ===================================-->
 <!--============================================================================-->
@@ -83,11 +83,11 @@
   </div>
 </footer>
 
-  <script src="resources/js/style.js"></script>
-  <script src="resources/js/style.min.js"></script>
-  <script src="resources/js/npm.js"></script>
-  <script>
-    $('.dropdown-toggle').dropdown()
-  </script>
-  </body>
+<script src="resources/js/style.js"></script>
+<script src="resources/js/style.min.js"></script>
+<script src="resources/js/npm.js"></script>
+<script>
+  $('.dropdown-toggle').dropdown()
+</script>
+</body>
 </html>

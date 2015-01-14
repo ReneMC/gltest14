@@ -24,8 +24,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li><a><span class="glyphicon glyphicon-home" aria-hidden="true"></span> </a></li>
-        <li class="active"><a><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Insertar</a></li>
-        <li><a><span class="glyphicon glyphicon-file" aria-hidden="true"></span> </a></li>
+        <li><a><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> </a></li>
+        <li class="active"><a><span class="glyphicon glyphicon-file" aria-hidden="true"></span> Baja empleados</a></li>
         <li><a><span class="glyphicon glyphicon-floppy-saved" aria-hidden="true"></span> </a></li>
       </ul>
     </div>
@@ -47,16 +47,65 @@
 <div>
   <div class="col-md-10-offset-3 container" style="position: middle;">
     <center><h3>Instrucciones:</h3></center>
-    <p>A continuaci&oacute;n se le presentar&aacute; el formulario de alta de empleados. Favor de llenar los datos que se le piden correctamente. Al terminar, seleccione el bot&oacute;n <span class="label label-default">Finalizar</span> que se encuentra al final del formulario para guardar los datos ingresados.</p>
+    <p>A continuaci&oacute;n se le presentar&aacute; el formulario de alta de empleados. Favor de llenar correctamente los datos que se le piden. Al terminar, seleccione el bot&oacute;n <span class="label label-default">Finalizar</span> que se encuentra al final del formulario para as&iacute; guardar los datos ingresados.</p>
   </div>
 </div>
 
 <div class="col-md-10-offset-3 container" style="position: middle;">
-
-  <form name="formulario" action="form_save" method="POST">
 <!--============================================================================-->
 <!--================================= Formulario ===============================-->
 <!--============================================================================-->
+
+<script language="JavaScript" type="text/javascript">
+function cancelar()
+{
+    window.location="baja"
+}
+</script>
+
+</head>
+
+
+<?php
+include("conexion.php");
+$clave=$_POST['clave'];
+if(empty($clave))
+{
+ echo"<script language='JavaScript' type='text/JavaScript'>
+           window.location='baja'
+        </script>
+       ";
+	   exit();
+}
+
+$sql="select * from tbl_empleado where id='$clave'";
+$registro=mysql_query($sql,$conexion);
+if(!$registro)
+{
+ echo"<script language='JavaScript' type='text/JavaScript'>
+           alert('Clave ID incorrecta')
+		   window.location='baja'
+		 </script>
+       ";
+}
+ else
+ {
+ $datos=mysql_fetch_object($registro);
+  if(!$datos->id)
+  {
+   echo"<script language='JavaScript' type='text/JavaScript'>
+           alert('No existe empleado con ese ID')
+		   window.location='baja'
+		 </script>
+       ";
+	   exit();
+  }
+ }
+?>
+
+
+<form name="baja" action="baja_save" method="POST">
+  <input type="hidden" name="clave" value="<?php echo $datos->id?>">
 <fieldset>
     <legend>Datos Generales</legend>
     <table class="table table-striped">
@@ -71,82 +120,32 @@
       <tbody>
         <tr>
           <td><center>Nombre:</center></td>
-          <td><input type="text" class="form-control" name="nombre" placeholder="Nombre Completo" required></td>
+          <td><input type="text" class="form-control" name="nombre" value="<?php echo $datos->nombre?>" readonly></td>
           <td> <center>Edad:</center> </td>
-          <td><input type="number" class="form-control" name="edad" min="1" max="120" step="1" placeholder="18" required></td>
+          <td><input type="number" class="form-control" name="edad" value="<?php echo $datos->edad?>" readonly></td>
         </tr>
         <tr>
           <td><center>Direcci&oacute;n:</center></td>
-          <td><input type="text" class="form-control" name="direccion" placeholder="Direcci&oacute;n" required></td>
+          <td><input type="text" class="form-control" name="direccion" value="<?php echo $datos->direccion?>" readonly></td>
           <td><center>Estado:</center></td>
-          <td><select name="estado" class="form-control" required>
-                <option value="True">Activo</option>
-                <option value="False">Inactivo</option>
-              </select>
-	        </td>
+          <td>
+            <select name="estado" class="form-control" value="<?php echo $datos->estado?>" readonly>
+              <option value="1">Activo</option>
+              <option value="0">Inactivo</option>
+            </select>
+          </td>
         <tr>
           <td><center>Fecha de Nacimiento:</center></td>
-          <td><input type="date" class="form-control" name="fdn" required></input></td>
+          <td><input type="date" class="form-control" name="fecha_nacimiento" value="<?php echo $datos->fecha_nacimiento?>" readonly></input></td>
           <td><center>Tel&eacute;fono:</center></td>
-          <td><input type="tel" class="form-control" name="telefono" placeholder="N&uacute;mero de tel&eacute;fono"></input></td>
+          <td><input type="number" class="form-control" name="telefono" value="<?php echo $datos->telefono?>" readonly></input></td>
         </tr>
       </tbody>
     </table>
 </fieldset>
 
-<fieldset>
-  <legend>Conocimientos</legend>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th width="25%"></th>
-          <th width="25%"></th>
-          <th width="25%"></th>
-          <th width="25%"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><center>Porcentaje:</center></td>
-          <td>
-            <div class="input-group">
-              <input type="number" class="form-control" name="porcentaje" min="1" max="100" step="1" placeholder="0" required>
-              <span class="input-group-addon" id="basic-addon2">%</span>
-            </div>
-          </td>
-          <td> <center>Curso:</center> </td>
-          <td><input type="text" class="form-control" name="curso" placeholder="Curso" required></td>
-        </tr>
-      </tbody>
-    </table>
-</fieldset>
 
-<fieldset>
-  <legend>Lenguajes</legend>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th width="25%"></th>
-          <th width="25%"></th>
-          <th width="25%"></th>
-          <th width="25%"></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><center>Lenguaje:</center></td>
-          <td>
-            <input type="text" class="form-control" name="lenguaje" placeholder="A&ntilde;adir un lenguaje" required>
-          </td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-
-</fieldset>
-
-<input type="submit" class="btn btn-default btn-lg" value="Finalizar">
+<input type="submit" class="btn btn-default btn-lg" value="S&iacute;, deseo eliminar este registro">
 </div>
 
 

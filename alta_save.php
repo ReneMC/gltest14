@@ -26,7 +26,7 @@
 
   $ver = mysql_query('SELECT id FROM tbl_empleado');
   while($row = mysql_fetch_assoc($ver)) {
-    $id = $row['tbl_empleado_id'];
+    $id = $row['id'];
   }
 
 
@@ -46,5 +46,5 @@
     {
       location.href=pagina
     }
-  setTimeout ("redireccionar()", 500);
+  setTimeout ("redireccionar()", 10000);
 </script>

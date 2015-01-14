@@ -53,7 +53,7 @@
   <div>
 
     <div class="col-md-10-offset-3 container" style="position: middle;">
-      <h1>Bienvenido!<br><h4><small>13 de Enero del 2015</h4></h1>
+      <h1>Bienvenido al formulario!<br><h4><small>13 de Enero del 2015</h4></h1>
         <h2><small>1. En esta secci&oacute;n describir&eacute; el funcionamiento de la aplicaci&oacute;n.</small></h2>
         <h2><small>2. Tratar&eacute; de ser breve y a la vez elegante.</h2></small>
         <h2><small>3. El footer se est&aacute; poniendo punk, seg&uacute;n veo.</h2></small>
@@ -68,6 +68,7 @@
 
 <!-- Se hacen saltos de línea en caso de que el footer -->
 <!-- se coma parte del espacio del contenido. -->
+<br><br><br><br><br>
 <br><br><br><br><br>
 <!--============================================================================-->
 <!--================================= Footer ===================================-->
