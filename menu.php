@@ -50,7 +50,7 @@
     <h1>Men&uacute; Principal</h1>
 
     <div class="list-group">
-      <a href="index" class="list-group-item">
+      <a href="form" class="list-group-item">
         <h4 class="list-group-item-heading">Dar de alta un usuario en el sistema</h4>
         <p class="list-group-item-text">Dar clic en esta seccion para ir a altas de usuario.</p>
       </a>
@@ -58,7 +58,7 @@
         <h4 class="list-group-item-heading">Dar de baja un usuario en el sistema</h4>
         <p class="list-group-item-text">Dar clic en esta seccion para ir a altas de usuario.</p>
       </a>
-      <a href="#" class="list-group-item">
+      <a href="index" class="list-group-item">
         <h4 class="list-group-item-heading">Modificar los datos de un usuario en el sistema</h4>
         <p class="list-group-item-text">Dar clic en esta seccion para ir a altas de usuario.</p>
       </a>

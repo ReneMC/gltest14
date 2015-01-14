@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="resources/css/style-theme.min.map" />
     <script charset="utf-8">
       function Comenzar(){
-        location.href="start"
+        location.href="menu"
       }
     </script>
 
@@ -60,7 +60,7 @@
 
         <br>
 
-      <button type="button" onclick="location='start'" class="btn btn-default btn-lg" href="start.php"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Ir a la aplicaci&oacute;n</button>
+      <button type="button" onclick="location='menu'" class="btn btn-default btn-lg" href="menu"><span class="glyphicon glyphicon-arrow-right" aria-hidden="true"></span> Ir a la aplicaci&oacute;n</button>
 
     </div>
 
