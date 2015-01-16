@@ -74,5 +74,5 @@
     {
       location.href=pagina
     }
-  setTimeout ("redireccionar()", 10000);
+  setTimeout ("redireccionar()", 500);
 </script>
